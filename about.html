@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Eat & Travel by MKC</title>
+        <link rel="stylesheet" href="about.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <img src="image/tra.png">
+              <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+              </div>
+              <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <img class="me" src="image/travel12.png" alt="Your Image">
+            <h1>About Us</h1>
+            
+            <div class="AB">
+                <div class="description">
+                    <p>Greetings and welcome to MKC, a place where enjoying delectable snacks and embarking on one exciting journey at a time are our main priorities!  I'm a foodie and travel enthusiast who thinks life's too short to limit oneself to a single cuisine or location. I'm here to share my love of delicious food and amazing travel experiences with you, whether we're devouring street food treats in busy markets or traveling to far-off destinations. Come along on this tantalizing and enticing adventure with me, and together, let's travel, dine, and create treasured memories!</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+        </script>
+
+    </body>
+</html>

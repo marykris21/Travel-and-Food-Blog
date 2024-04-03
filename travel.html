@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Eat & Travel by MKC</title>
+        <link rel="stylesheet" href="travel.css">
+    </head>
+    <body>
+            <section class="header">
+                <nav>
+                    <img src="image/tra.png">
+                  <div class="nav-links" id="navLinks">
+                    <i class="fa fa-close" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                  </div>
+                  <i class="fa fa-bars" onclick="showMenu()"></i>
+                </nav>
+            </section>
+
+
+            <section class="image-gallery">
+                <h1>Discover</h1>
+                <div class="row">
+                    <div class="image-col">
+                        <img src="image/travel2.jpg" alt="Swimming Pool">
+                        <div class="image-description">Villa Arcadia</div>
+                    </div>
+                    <div class="image-col">
+                        <img src="image/travel1.jpg" alt="White Flower">
+                        <div class="image-description">Sea Dagat</div>
+                    </div>
+                    <div class="image-col">
+                        <img src="image/1.jpg" alt="Orange Flower">
+                        <div class="image-description">Swimming Pool</div>
+                    </div>
+                    <div class="image-col">
+                        <img src="image/coron.jpg" alt="Orange Flower">
+                        <div class="image-description">Coron Palawan</div>
+                    </div>
+                    <div class="image-col">
+                        <img src="image/falls.jpg" alt="Orange Flower">
+                        <div class="image-description">Maria Christina Falls</div>
+                    </div>
+                    <div class="image-col">
+                        <img src="image/boracay.jpg" alt="Orange Flower">
+                        <div class="image-description">Boracay</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="vido">
+                <h1>Recent Videos</h1>
+                <div class="vid">
+                    <div class="video-col">
+                        <video width="500" height="400" controls autoplay muted>
+                            <source src="video/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                          <div class="description">
+                            <h3>Beautiful Beach Scenery</h2>
+                            <p>Relax and enjoy the calming sights and sounds of the ocean.</p>
+                            </div>
+                    </div>
+                    <div class="video-col2">
+                        <video width="500" height="400" controls autoplay muted>
+                            <source src="video/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                          <div class="description2">
+                            <h3>Beautiful Beach Scenery</h2>
+                            <p>Relax and enjoy the calming sights and sounds of the ocean.</p>
+                            </div>
+                    </div>
+                </div>   
+            </section>
+
+
+            <section class="footer">
+                <p>&copy; 2024 Travel Blog. All rights reserved.</p>
+            </section>
+
+            <script>
+
+                var navLinks = document.getElementById("navLinks");
+
+                function showMenu(){
+                    navLinks.style.right = "0";
+                }
+                function hideMenu(){
+                    navLinks.style.right = "-200px";
+                }
+
+            </script>
+
+    </body>
+</html>
