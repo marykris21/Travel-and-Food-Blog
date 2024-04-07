@@ -6,17 +6,139 @@
 .header{
     min-height: 80vh;
     width: 100%;
-    background-image: url("image/food4.jpg");
+    background-image: url("image/fobg.png");
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
-@media(max-width: 700px){
+.but{
+    height: 6vh;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin-top: 300px;
+    margin-right: 200px;
+}
+
+.button{
+    position: relative;
+    padding: 10px 22px;
+    background: red;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.button:active{
+    transform: scale(0.96);
+}
+
+.button::before,
+.button::after{
+     content: "";
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     height: 100%;
+     width: 150px;
+     z-index: -1;
+     background-repeat: no-repeat;
+}
+
+.button.animate::before{
+    top: -70%;
+    background-image: radial-gradient(circle, #FFFFFF 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%,  #FFFFFF 20%, transparent 30%),
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%), 
+    radial-gradient(circle, transparent 10%,  #FFFFFF 15%, transparent 20%),
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%), 
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%), 
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%), 
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 
+    18% 18%;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,40% 90%, 
+    55% 90%, 70% 90%;
+    animation: topBubbles 0.5s ease-in-out infinite;
+}
+@keyframes topBubbles{
+   50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 
+    50% 50%, 65% 20%, 90% 30%;
+   }
+   100%{
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 
+    50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%,0% 0%,0% 0%,0% 0%,0% 0%,0% 0%;
+   }
+}
+
+.button.animate::after{
+    bottom: -70%;
+    background-image: radial-gradient(circle, #FFFFFF 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%,  #FFFFFF 15%, transparent 20%),
+    radial-gradient(circle,#FFFFFF 20%, transparent 20%),
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%),
+    radial-gradient(circle,#FFFFFF 20%, transparent 20%),
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%),
+    radial-gradient(circle, #FFFFFF 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+    animation: bottomBubbles 0.5s ease-in-out infinite;
+}
+@keyframes bottomBubbles {
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,;
+    }
+}
+@media(max-width: 740px){
     .header {  
         background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    .but {
+        height: 3vh;
+        display: flex;
+        align-items: right;
+        justify-content: right;
+        margin-top: 350px; 
+        margin-right: 25px; 
+    }
+
+    .button {
+        padding: 4px 18px; 
+        font-size: 16px; 
+        font-weight: 200;
     }
 }  
+
+@media (max-width: 480px) {
+    .but {
+        height: auto; /* Change height to auto for flexibility */
+        margin: 250px 10px 0 10px; /* Adjust margins for smaller screens */
+        justify-content: center; /* Center-align items for smaller screens */
+        align-items: center; /* Center-align items for smaller screens */
+    }
+
+    .button {
+        padding: 4px 12px; /* Decrease padding for smaller screens */
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+}
+
 
 nav{
     background-color: #feb3e0;
@@ -68,7 +190,7 @@ nav img{
 nav .fa {
     display: none;
 }
-@media(max-width: 700px){
+@media(max-width: 740px){
     .text-box h1{
         font-size: 20px;
     }
@@ -102,6 +224,34 @@ nav .fa {
     }
 }
 
+
+@media (max-width: 480px) {
+    .text-box h1 {
+        font-size: 16px; /* Decreased font size for smaller screens */
+    }
+
+    .nav-links ul li {
+        display: block; /* Ensure list items are displayed as blocks on smaller screens */
+    }
+
+    .nav-links {
+        width: 150px; /* Adjusted width for smaller screens */
+        right: -150px; /* Adjusted right position for smaller screens */
+        text-align: center; /* Center-align text for smaller screens */
+        padding-top: 50px; /* Added padding top for better spacing */
+    }
+
+    nav .fa {
+        margin: 8px; /* Decreased margin for smaller screens */
+        font-size: 18px; /* Decreased font size for smaller screens */
+    }
+
+    .nav-links ul {
+        padding: 10px; /* Decreased padding for smaller screens */
+    }
+}
+
+
 .image-gallery{
     width: 100%;
     margin: auto;
@@ -126,7 +276,8 @@ h1{
     border: 3px solid #000000;
     flex-basis: 31%;
     margin-bottom: 5%;
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 10px;
     padding: 20px 12px;
     box-sizing: border-box;
@@ -146,7 +297,13 @@ h1{
     font-family:'Times New Roman', Times, serif;
  }
 
- @media(max-width: 700px){
+ @media(max-width: 740px){
+    .row{
+        flex-direction: column;
+    }
+ }
+
+ @media(max-width: 480px){
     .row{
         flex-direction: column;
     }
@@ -214,7 +371,14 @@ h1{
 }
 
 
-@media (max-width: 700px) {
+p.see-more {
+    margin-top: 10px;
+    font-size: 20px; 
+    font-style: italic;
+    color: black; 
+}
+
+@media (max-width: 740px) {
     .vido {
         width: 100%;
         height: auto; 
@@ -253,12 +417,30 @@ h1{
 
     .description,
     .description2 {
-        width: 90%; 
+        width: 86%; 
         padding: 20px;
         background-color: rgb(1, 1, 1);
         color: rgb(255, 255, 255);
         text-align: center;
         margin-bottom: 40px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    @media (max-width: 480px) {
+        .vido {
+            padding-top: 20px; /* Adjusted padding for smaller screens */
+        }
+    
+        .video-col {
+            width: 90%; /* Adjusted width for smaller screens */
+        }
+    
+        .description {
+            width: 90%; /* Adjusted width for smaller screens */
+            padding: 15px; /* Adjusted padding for smaller screens */
+        }
     }
 }
 
